@@ -1,0 +1,101 @@
+.container-slides {
+  display: grid;
+  place-items: center;
+  height: 700px;
+}
+
+.container-review > h1 {
+  text-align: center;
+  margin: 1em;
+  font-size: 4em;
+  text-shadow: 1px 1px 3px;
+  color: rgb(26, 236, 61);
+}
+
+.card-review {
+  border: 1px solid #525357;
+  border-radius: 10px;
+  background-color: #ebdf40;
+  margin: 1em;
+  padding: 1.5em 1em;
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.5);
+  color: #131101;
+  height: 35em;
+  width: 60em;
+}
+
+.img-review {
+  object-fit: cover;
+  aspect-ratio: 200/200;
+  width: 100%;
+  height: 75%;
+}
+
+.slides {
+  overflow: hidden;
+  position: absolute;
+}
+
+.slide {
+  position: relative;
+  opacity: 0;
+  inset: 0;
+  animation: slide-show 28s infinite;
+}
+
+.slide-2 {
+  animation-delay: 4s;
+}
+
+.slide-3 {
+  animation-delay: 8s;
+}
+
+.slide-4 {
+  animation-delay: 12s;
+}
+
+.slide-5 {
+  animation-delay: 16s;
+}
+
+.slide-6 {
+  animation-delay: 20s;
+}
+
+.slide-7 {
+  animation-delay: 24s;
+}
+
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.03;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-review {
+    width: 40em;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .card-review {
+    width: 24em;
+  }
+
+  .container-review > h1 {
+    font-size: 2em;
+  }
+}
